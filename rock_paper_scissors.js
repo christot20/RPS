@@ -1,7 +1,7 @@
 //test
 i = 0; //player score variable
 j = 0; //computer score variable
-console.log("Hello");
+console.log("Hello"); //test to see if script runs
 function computerPlay(){ //computer choice function
     const choices = ["rock", "paper", "scissors"]; //array of choices
     return choices[Math.floor(Math.random() * choices.length)]; //chooses random value from array
@@ -31,14 +31,14 @@ function playRound(compChoice, playerChoice){ //round function
         game();
         return "You won the round!";
     }
-    else if (playerChoice === "paper" && compChoice === "rock"){
+    else if (playerChoice === "paper" && compChoice === "rock"){ //if player wins conditionals
         console.log("You Win!");
         i++;
         console.log(i, j);
         game();
         return "You won the round!";
     }
-    else if (playerChoice === "scissors" && compChoice === "paper"){
+    else if (playerChoice === "scissors" && compChoice === "paper"){ //if player wins conditionals
         console.log("You Win!");
         i++;
         console.log(i, j);
@@ -51,7 +51,7 @@ function playRound(compChoice, playerChoice){ //round function
         game();
         return "The round is a tie!";
     }
-    else if(playerChoice != "rock" && playerChoice != "paper" && playerChoice != "scissors"){
+    else if(playerChoice != "rock" && playerChoice != "paper" && playerChoice != "scissors"){ //for invalid answers
         console.log("invalid answer");
         game();
         return "Please enter either Rock, Paper, or scissors.";
@@ -63,6 +63,5 @@ function playRound(compChoice, playerChoice){ //round function
         game();
         return "You lost the round!";
     }
-    
 }
 playRound(computerPlay(), prompt("What will you choose?").toLowerCase());
