@@ -1,4 +1,3 @@
-//test
 i = 0; //player score variable
 j = 0; //computer score variable
 console.log("Hello"); //test to see if script runs
@@ -6,24 +5,38 @@ function computerPlay(){ //computer choice function
     const choices = ["rock", "paper", "scissors"]; //array of choices
     return choices[Math.floor(Math.random() * choices.length)]; //chooses random value from array
 }
-function game(){  //round loop function, first to 5 wins, loop ends
-    while (i <= 5 || j <= 5) {
-        if (i === 5){   //if human wins
-            console.log("You Win");
-            return "You Won!";
+
+function playRound(e, compChoice, playerChoice){ //round function
+    function game(){
+        if(i === 5){
+            console.log(i);
+            return "You won the Match!"
         }
-        else if (j === 5){  //if computer wins
-            console.log("You lose");
-            return "You Lost!";
+        else if (j === 5){
+            console.log(j);
+            return "You lost the Match!"
         }
         else{
-            return playRound(computerPlay(), prompt("What will you choose? Rock, Paper, or Scissors?").toLowerCase());
+            console.log("next round")
+            return "Next Round!"
+        }
+    }
+    function playerPlay(){
+        if(e.srcElement.textContent === "Rock") {
+            return "rock";
+        }
+        else if(e.srcElement.textContent === "Paper") {
+            return "paper";
+        }
+        else if(e.srcElement.textContent === "Scissors") {
+            return "scissors";
         }
     } 
-} 
-function playRound(compChoice, playerChoice){ //round function
+    compChoice =  computerPlay();
+    playerChoice = playerPlay();
     console.log(playerChoice);
     console.log(compChoice);
+
     if (playerChoice === "rock" && compChoice === "scissors"){  //if player wins conditionals
         console.log("You Win!");
         i++;
@@ -51,11 +64,6 @@ function playRound(compChoice, playerChoice){ //round function
         game();
         return "The round is a tie!";
     }
-    else if(playerChoice != "rock" && playerChoice != "paper" && playerChoice != "scissors"){ //for invalid answers
-        console.log("invalid answer");
-        game();
-        return "Please enter either Rock, Paper, or scissors.";
-    }
     else{ 
         console.log("You Lose.");   //if computer wins the round
         j++;
@@ -64,4 +72,5 @@ function playRound(compChoice, playerChoice){ //round function
         return "You lost the round!";
     }
 }
-playRound(computerPlay(), prompt("What will you choose?").toLowerCase());
+const bttn = document.querySelectorAll("button");
+bttn.forEach(bttn => bttn.addEventListener("click", playRound));
