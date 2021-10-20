@@ -4,12 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <script defer src="rock_paper_scissors.js"></script>
     <title>Rock,Paper, Scissors!</title>
 </head>
 <body>
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
+    <h1>Rock Paper Scissors</h1>
+    <h2>First Person to Five Points Wins</h2>
+    <div id="allbuttons">
+        <button id="rock"><img src="Icons/rock.png" alt=""></button>
+        <button id="paper"><img src="Icons/paper.png" alt=""></button>
+        <button id="scissors"><img src="Icons/scissors.png" alt=""></button>
+    </div>
+    <div id="choice-pictures">
+        <img src="Icons/getready.png" alt="" id="playerpic">
+        <img src="Icons/getready.png" alt="" id ="cpupic">
+    </div>
+    <div id="choice">
+        <div >The player chose: <span id="playerletters"></span></div>
+        <div >The computer chose: <span id="cpuletters"></span> </div>
+    </div>
+    <div id="score">
+        <div class="score1">
+            <span>The player score is: </span>
+            <h3 id="scoreme"></h3>
+        </div>
+        <div class="score1">
+            <span>The cpu score is: </span>
+            <h3 id="scorecpu"></h3>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modaltext"></p>
+      </div>
+    </div>
 </body>
 </html>
