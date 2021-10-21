@@ -10,7 +10,7 @@ body{
     font-weight: normal;
     display: flex;
     flex-direction: column;
-    gap: 3.5em;
+    gap: 9vh;
 }
 h1, h2, #allbuttons, #choice-pictures, #choice, #score{
     display: flex;
