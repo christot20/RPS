@@ -19,7 +19,7 @@ What I learned:
 5. JS DOM Manipulation and use of HTML, CSS, and JS in one project together
 
 What's Next:
-1. Learning SASS
+1. Learning SASS and PostCSS
 2. More advanced use of DOM manipulation
 3. Learning of objects in JS
 
