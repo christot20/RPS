@@ -28,7 +28,6 @@ function game(){
     }
 }
 function playRound(e){ //round function
-    console.log(e);
     function playerPlay(){
         if(e.srcElement.outerHTML === "<img src=\"Icons/rock.png\" alt=\"\">") {
             document.getElementById("playerpic").src="Icons/rock.png";
@@ -101,7 +100,9 @@ function playRound(e){ //round function
     }
 }
 const bttn = document.querySelectorAll("button");
-bttn.forEach(bttn => bttn.addEventListener("click", playRound));    
+bttn.forEach(bttn => bttn.addEventListener("click", playRound)); 
+
+
 
 const scoreme = document.querySelector("#scoreme"); //playerscore tag
 const scorecpu = document.querySelector("#scorecpu"); //cpuscore tag
@@ -120,9 +121,13 @@ function playAgain(){
     modal.style.display = "block";
     if (i === 5){
         document.getElementById("modaltext").innerHTML = "You Won!";
+        win = document.getElementById("sus");
+        win.style.backgroundColor = "#1b8d61";
     }
     else if (j === 5){
         document.getElementById("modaltext").innerHTML = "You Lost!";
+        lose = document.getElementById("sus");
+        lose.style.backgroundColor = "rgb(255, 46, 46)";
     }
     //maybe build a function to restart the webpage  
 }
@@ -131,7 +136,7 @@ let modal = document.getElementById("myModal"); //popup modal at end of game
 let span = document.getElementsByClassName("close")[0]; //x button of modal
 
 
-span.onclick = function() {  //exit modal if x button is clicked
+modal.onclick = function() {  //exit modal if x button is clicked
   modal.style.display = "none";
   window.location.reload(); //reload page
 }
