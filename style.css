@@ -1,17 +1,17 @@
-@font-face { font-family: LoveGlitch; src: url('LoveGlitchPersonalUseRegular-vmEyA.ttf'); } 
+@font-face { font-family: LoveGlitch; src: url('LoveGlitchPersonalUseRegular-vmEyA.ttf'); }  /*imported fint */
 * {
     margin: 0;
     padding: 0;
   }
 body{
-    background-image: url("https://cdn.wallpapersafari.com/35/73/LUhwmg.gif");
+    background-image: url("https://cdn.wallpapersafari.com/35/73/LUhwmg.gif");  /* background, body stricture, and text */
     font-family: LoveGlitch;
     color: rgb(255, 255, 255);
     font-weight: normal;
     display: flex;
     flex-direction: column;
 }
-h1, h2, #allbuttons, #choice-pictures, #choice, #score{
+h1, h2, #allbuttons, #choice-pictures, #choice, #score{ /*main structure */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@ h1, h2, #allbuttons, #choice-pictures, #choice, #score{
     height: 15vh;
 }
 h1{
-    margin-top: .75em;
+    margin-top: 3vh;
 }
 #allbuttons{
     gap: 5em;
@@ -29,18 +29,18 @@ h1{
     height: 50px;
 }
 #allbuttons img{
-    width: 110px;
-    height: 110px;
+    width: 9vw;
+    height: 19vh;
 }
 #allbuttons img:hover{
-    width: 120px;
-    height: 120px;
+    width: 10vw;
+    height: 21vh;
     cursor: pointer;
 }
 
 #allbuttons button{
-    width: 110px;
-    height: 115px;
+    width: 9vw;
+    height: 18vh;
     border-radius: 50%;
     border: none;
     background-color: transparent;
@@ -53,11 +53,11 @@ h1{
     gap: 6em;
 }
 #choice-pictures img{
-    height: 4.5em;
-    width: 4.5em;
+    height: 11vh;
+    width: 5vw;
 }
 #score, #choice{
-    font-size: 17px;
+    font-size: 5vh;
 }
 #choice{
     gap: 3.5em;
@@ -65,30 +65,36 @@ h1{
 #score{
     gap:3.25em;
 }
+h1{
+    font-size: 7vh;
+}
+h2{
+    font-size: 5vh;
+}
 #score h3{
-    font-size: 15.5px;
+    font-size: 4.5vh;
 }
 .score1{
     display: inline-flex;
     gap:.5em;
     align-items: center;
 }
-#allbuttons button:active {
+#allbuttons button:active {     /*click animation */
     transform: translateY(4px);
   }
-/* The Modal (background) */
+  /* modal background */
 .modal {
     display: none; 
     position: fixed; 
     z-index: 1; 
     left: 0;
     top: 0;
-    width: 100%; 
+    width: 100%;
     height: 100%; 
     overflow: auto; 
     background-color: rgba(0, 0, 0, 0.4); 
   }
-  /* Modal Content/Box */
+  /* modal box */
   .modal-content {
     background-color: #ffffff;
     margin: 12.5em auto;
@@ -99,7 +105,7 @@ h1{
     justify-content: center;
     padding: 20px;
     border: 4px solid rgb(156, 156, 156);
-    width: 25%; /* Could be more or less, depending on screen size */
+    width: 25%; 
     height: 10%;
     color: black;
     border-radius: 20px;
