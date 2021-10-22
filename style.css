@@ -51,6 +51,7 @@ h1{
 }
 #choice-pictures{
     gap: 6em;
+    margin-top: 1em;
 }
 #choice-pictures img{
     height: 11vh;
